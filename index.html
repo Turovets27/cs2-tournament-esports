@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CS2 Cards — Vitality</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+    .player-card {
+      background-color: #1e1e1e;
+      border: 2px solid #444;
+      border-radius: 10px;
+      width: 160px;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .player-card:hover {
+      transform: scale(1.05);
+      border-color: #f0c000;
+    }
+    .player-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .player-card.selected {
+      border-color: #00ff88;
+      background-color: #263a2e;
+    }
+  </style>
+</head>
+<body>
+  <h1>Магазин игроков</h1>
+  <h2>Team Vitality</h2>
+  <div class="card-container">
+    <div class="player-card" onclick="selectPlayer(this)">
+      <img src="https://static.hltv.org/images/playerprofile/bodyshot/11893.png" alt="ZywOo">
+      <h3>ZywOo</h3>
+      <p>Роль: Снайпер</p>
+      <p>Рейтинг: 80</p>
+      <p>Цена: 30</p>
+      <p>Команда: Vitality</p>
+    </div>
+    <div class="player-card" onclick="selectPlayer(this)">
+      <img src="https://static.hltv.org/images/playerprofile/bodyshot/7322.png" alt="apEX">
+      <h3>apEX</h3>
+      <p>Роль: Капитан (IGL)</p>
+      <p>Рейтинг: 72</p>
+      <p>Цена: 22</p>
+      <p>Команда: Vitality</p>
+    </div>
+    <div class="player-card" onclick="selectPlayer(this)">
+      <img src="https://static.hltv.org/images/playerprofile/bodyshot/19733.png" alt="flameZ">
+      <h3>flameZ</h3>
+      <p>Роль: Риффлер</p>
+      <p>Рейтинг: 74</p>
+      <p>Цена: 23</p>
+      <p>Команда: Vitality</p>
+    </div>
+    <div class="player-card" onclick="selectPlayer(this)">
+      <img src="https://static.hltv.org/images/playerprofile/bodyshot/11816.png" alt="ropz">
+      <h3>ropz</h3>
+      <p>Роль: Риффлер</p>
+      <p>Рейтинг: 76</p>
+      <p>Цена: 26</p>
+      <p>Команда: Vitality</p>
+    </div>
+    <div class="player-card" onclick="selectPlayer(this)">
+      <img src="https://static.hltv.org/images/playerprofile/bodyshot/15249.png" alt="mezii">
+      <h3>mezii</h3>
+      <p>Роль: Риффлер</p>
+      <p>Рейтинг: 71</p>
+      <p>Цена: 20</p>
+      <p>Команда: Vitality</p>
+    </div>
+<h1>Mouz</h1>
+<div class="card-container">
+  <div class="card" onclick="selectPlayer('torzsi')">
+    <img src="https://www.hltv.org/img/static/players/4303.png" alt="torzsi" />
+    <h3>torzsi</h3>
+    <p>Role: Sniper</p>
+    <p>Rating: 77</p>
+    <p>Price: 28 credits</p>
+  </div>
+  <div class="card" onclick="selectPlayer('Brollan')">
+    <img src="https://www.hltv.org/img/static/players/10322.png" alt="Brollan" />
+    <h3>Brollan</h3>
+    <p>Role: Capitan</p>
+    <p>Rating: 74</p>
+    <p>Price: 25 credits</p>
+  </div>
+  <div class="card" onclick="selectPlayer('xertioN')">
+    <img src="https://www.hltv.org/img/static/players/16604.png" alt="xertioN" />
+    <h3>xertioN</h3>
+    <p>Role: Rifler</p>
+    <p>Rating: 70</p>
+    <p>Price: 20 credits</p>
+  </div>
+  <div class="card" onclick="selectPlayer('Jimpphat')">
+    <img src="https://www.hltv.org/img/static/players/14126.png" alt="Jimpphat" />
+    <h3>Jimpphat</h3>
+    <p>Role: Rifler</p>
+    <p>Rating: 68</p>
+    <p>Price: 18 credits</p>
+  </div>
+  <div class="card" onclick="selectPlayer('Spinx')">
+    <img src="https://www.hltv.org/img/static/players/12588.png" alt="Spinx" />
+    <h3>Spinx</h3>
+    <p>Role: Rifler</p>
+    <p>Rating: 67</p>
+    <p>Price: 17</p>
+  </div>
+</div>
+  </div>
+
+  <script>
+    function selectPlayer(card) {
+      card.classList.toggle("selected");
+    }
+  </script>
+</body>
+</html>
